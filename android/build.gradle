@@ -3,10 +3,11 @@
 buildscript {
 
     repositories {
-        google()
+        maven {
+            url uri(System.getProperty('user.home') + '/.m2/repository')
+        }
         mavenCentral()
-        maven { url 'https://maven.aliyun.com/repository/public' }
-        maven { url 'https://maven.aliyun.com/repository/google' }
+        google()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:8.7.2'
@@ -20,10 +21,11 @@ apply from: "variables.gradle"
 
 allprojects {
     repositories {
-        google()
+        maven {
+            url uri(System.getProperty('user.home') + '/.m2/repository')
+        }
         mavenCentral()
-        maven { url 'https://maven.aliyun.com/repository/public' }
-        maven { url 'https://maven.aliyun.com/repository/google' }
+        google()
     }
 }
 
